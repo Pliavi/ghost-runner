@@ -1,19 +1,27 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/Character/Character.tscn" type="PackedScene" id=1]
-[ext_resource path="res://tilesets/GrassGroups.tscn" type="PackedScene" id=2]
-[ext_resource path="res://objects/StageMover/StageMover.gd" type="Script" id=3]
+[ext_resource path="res://objects/StageMover/StageMover.gd" type="Script" id=2]
+[ext_resource path="res://sprites/SunBG.png" type="Texture" id=3]
 
 [node name="Stage" type="Node2D"]
 
-[node name="camera" type="Camera2D" parent="."]
+[node name="Character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, -32 )
+z_index = 2
+z_as_relative = false
+
+[node name="texture" type="Sprite" parent="Character"]
+show_behind_parent = true
+position = Vector2( 56, -32 )
+z_as_relative = false
+texture = ExtResource( 3 )
+
+[node name="camera" type="Camera2D" parent="Character"]
+position = Vector2( 56, -32 )
 current = true
 
 [node name="StageMover" type="Node2D" parent="."]
-script = ExtResource( 3 )
-
-[node name="TileMap" parent="StageMover" instance=ExtResource( 2 )]
-position = Vector2( -70.6921, 63.3156 )
-
-[node name="Character" parent="." instance=ExtResource( 1 )]
-position = Vector2( -40.3502, 36.9167 )
+z_index = 1
+z_as_relative = false
+script = ExtResource( 2 )
