@@ -19,12 +19,18 @@ config/name="SimpleRunner"
 run/main_scene="res://stages/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://objects/Globals.gd"
+
 [display]
 
 window/size/width=144
 window/size/height=128
-window/size/test_width=640
-window/size/test_height=480
+window/size/resizable=false
+window/size/test_width=576
+window/size/test_height=512
+window/vsync/vsync_via_compositor=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
 
@@ -36,9 +42,12 @@ jump={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="hurt"
+
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
