@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Life.png-3bac37b3666bed0d3a3ac8e41b6ed9ab.stex"
+path="res://.import/life_hud_closing.png-c1c59db9d38e1a2b6a88fe9ae9f09af6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/HUD/Life.png"
-dest_files=[ "res://.import/Life.png-3bac37b3666bed0d3a3ac8e41b6ed9ab.stex" ]
+source_file="res://sprites/HUD/Life/life_hud_closing.png"
+dest_files=[ "res://.import/life_hud_closing.png-c1c59db9d38e1a2b6a88fe9ae9f09af6.stex" ]
 
 [params]
 

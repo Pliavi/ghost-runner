@@ -1,4 +1,4 @@
 extends Node
 
-var life_total = 2
-var lifes = 2
+var life_total = 15
+var lifes = 0

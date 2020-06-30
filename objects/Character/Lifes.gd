@@ -1,21 +1,34 @@
-extends Node2D
+extends HBoxContainer
+
+var life_state_textures = {
+	"empty": preload("res://sprites/HUD/Life/life_empty.png"),
+	"filled": preload("res://sprites/HUD/Life/life_filled.png")
+}
 
 func _ready():
-	var last_life = $container/life
-	for _i in range(Globals.life_total - 1):
-		var new_life = $container/life.duplicate()
-		self.get_node("container").add_child(new_life)
-		new_life.global_position = last_life.global_position
-		new_life.global_position.x += 9
-		last_life = new_life
-	$closing.global_position.x = last_life.global_position.x + 9
+	for _i in range(Globals.life_total):
+		Globals.lifes += 1
+		add_life_slot()
 
-func _on_hurt_box_body_entered(_body):
-	if Globals.lifes > 1:
-		Globals.lifes -= 1
-		var hurt_life = self.get_node("container").get_children()[Globals.lifes]
-		hurt_life.region_rect.position.x = 9
-	else:
-		Globals.lifes = 2
-		self.get_tree().reload_current_scene()
+func add_life_slot():
+	var life = create_life()
+	self.add_child(life)
+	self.move_child(life, 0)
 	
+func create_life():
+	var new_life = TextureRect.new()
+	new_life.texture = self.life_state_textures.filled
+	
+	return new_life
+	
+func _on_hurt():
+	Globals.lifes -= 1
+	var life:TextureRect = self.get_child(Globals.lifes)
+	life.texture = self.life_state_textures.empty
+	
+	if Globals.lifes == 0:
+		self.get_tree().reload_current_scene()
+
+func _on_dead():
+	Globals.lifes = 0
+	self.get_tree().reload_current_scene()
