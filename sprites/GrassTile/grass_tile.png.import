@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SunBG.png-7905174361cad43c7b9c8adc2d6664b4.stex"
+path="res://.import/grass_tile.png-0e67ba2b39f6d6cd0a85e4919d5b35d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/SunBG.png"
-dest_files=[ "res://.import/SunBG.png-7905174361cad43c7b9c8adc2d6664b4.stex" ]
+source_file="res://sprites/GrassTile/grass_tile.png"
+dest_files=[ "res://.import/grass_tile.png-0e67ba2b39f6d6cd0a85e4919d5b35d0.stex" ]
 
 [params]
 

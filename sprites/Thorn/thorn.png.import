@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrassTile.png-b479471e55abb6b4858dd99adad71562.stex"
+path="res://.import/thorn.png-7862481cdb45115474fb8d320e360616.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/GrassTile/GrassTile.png"
-dest_files=[ "res://.import/GrassTile.png-b479471e55abb6b4858dd99adad71562.stex" ]
+source_file="res://sprites/Thorn/thorn.png"
+dest_files=[ "res://.import/thorn.png-7862481cdb45115474fb8d320e360616.stex" ]
 
 [params]
 

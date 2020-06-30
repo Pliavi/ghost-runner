@@ -2,7 +2,7 @@
 
 [ext_resource path="res://objects/Character/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/StageMover/StageMover.gd" type="Script" id=2]
-[ext_resource path="res://sprites/SunBG.png" type="Texture" id=3]
+[ext_resource path="res://sprites/sky_background.png" type="Texture" id=3]
 
 [node name="Stage" type="Node2D"]
 

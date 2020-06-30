@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Thorn.png-55c676508cceb13146e04ff0011a8037.stex"
+path="res://.import/sky_background.png-03886536a0c1b1ccac59d3ef0b0af5b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Thorn/Thorn.png"
-dest_files=[ "res://.import/Thorn.png-55c676508cceb13146e04ff0011a8037.stex" ]
+source_file="res://sprites/sky_background.png"
+dest_files=[ "res://.import/sky_background.png-03886536a0c1b1ccac59d3ef0b0af5b5.stex" ]
 
 [params]
 
