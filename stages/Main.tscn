@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://objects/Character/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/StageMover/StageMover.gd" type="Script" id=2]
@@ -35,21 +35,16 @@ margin_bottom = 12.0
 texture = ExtResource( 7 )
 
 [node name="Character" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16, -32 )
+position = Vector2( 32, 88 )
 z_index = 2
 z_as_relative = false
 
-[node name="texture" type="Sprite" parent="Character"]
-show_behind_parent = true
-position = Vector2( 56, -32 )
-z_as_relative = false
-texture = ExtResource( 3 )
-
 [node name="camera" type="Camera2D" parent="Character"]
-position = Vector2( 56, -32 )
+position = Vector2( 40, -24 )
 current = true
 
 [node name="StageMover" type="Node2D" parent="."]
+position = Vector2( -3365.28, 128 )
 z_index = 1
 z_as_relative = false
 script = ExtResource( 2 )
