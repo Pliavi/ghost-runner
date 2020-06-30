@@ -29,12 +29,14 @@ func add_platform():
 	
 	if last_platform:
 		var last_platform_position = last_platform.get_node("end_position").global_position
-		var horizontal_pos = last_platform_position.x + fall_space
+		var horizontal_pos = last_platform_position.x + fall_space 
 		var vertical_pos = last_platform_position.y + new_vertical_height * 16
 		
 		new_platform.global_position = Vector2(horizontal_pos, vertical_pos)
 	else:
-		new_platform.global_position = Vector2(0, -16)
+		var screen_height = get_viewport_rect().size.y
+
+		new_platform.global_position = Vector2(0, screen_height)
 		
 	last_platform = new_platform
 
