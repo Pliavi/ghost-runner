@@ -8,5 +8,5 @@ func _on_showtime():
 
 func _on_head_stomp(area:Area2D):
 	if area.name == "stomp_attack":
-		area.owner.call("half_jump")
+		area.owner.call("head_jump")
 		self.queue_free()

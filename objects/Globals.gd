@@ -1,5 +1,8 @@
 extends Node
 
+var is_music_on = true
+var is_fx_on = true
+
 var score = 0
 var high_score = 0
 var life_total = 3

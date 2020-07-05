@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/Console/console.png" type="Texture" id=1]
+[ext_resource path="res://objects/Console/Console.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Console/sound_toggle.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="CircleShape2D" id=3]
+
+[sub_resource type="CircleShape2D" id=4]
+
+[node name="Console" type="TextureRect"]
+margin_right = 240.0
+margin_bottom = 135.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="up" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 22.5244, 81.5468 )
+scale = Vector2( 1.4, 1.4 )
+shape = SubResource( 1 )
+shape_centered = false
+action = "jump"
+
+[node name="music_toggle" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 14.2439, 12.306 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="music_toggle" type="Sprite" parent="buttons/music_toggle"]
+visible = false
+position = Vector2( 0.7561, -0.306 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 12, 12 )
+
+[node name="goto_home" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 216.568, 13.8397 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="fullscreen" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 228.005, 3.99284 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="fullscreen2" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 235.995, 3.99284 )
+shape = SubResource( 2 )
+shape_centered = false
+
+[node name="fx_toggle" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 31.9415, 12.306 )
+shape = SubResource( 1 )
+shape_centered = false
+
+[node name="fx_toggle" type="Sprite" parent="buttons/fx_toggle"]
+visible = false
+position = Vector2( 0.0585003, -0.306 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 12, 0, 12, 12 )
+
+[node name="down" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 22.5244, 109.489 )
+scale = Vector2( 1.4, 1.4 )
+shape = SubResource( 3 )
+shape_centered = false
+action = "down"
+
+[node name="attack" type="TouchScreenButton" parent="buttons"]
+position = Vector2( 216.568, 95.4952 )
+scale = Vector2( 1.4, 1.4 )
+shape = SubResource( 4 )
+shape_centered = false
+action = "attack"
+[connection signal="gui_input" from="." to="." method="_on_Console_gui_input"]
+[connection signal="pressed" from="buttons/music_toggle" to="." method="_on_music_toggle_pressed"]
+[connection signal="pressed" from="buttons/fx_toggle" to="." method="_on_fx_toggle_pressed"]

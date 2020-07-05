@@ -1,24 +1,113 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://tilesets/Grass.tres" type="TileSet" id=1]
+[ext_resource path="res://tilesets/Grass/blocks/GrassBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/remove_platform.gd" type="Script" id=2]
 [ext_resource path="res://objects/Thorn/Thorn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/Death/Death.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tilesets/Grass/blocks/DirtBlock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tilesets/Grass/blocks/Bush.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tilesets/Grass/blocks/Tree.tscn" type="PackedScene" id=7]
 
 [node name="Group1" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Thorn" parent="." instance=ExtResource( 3 )]
-position = Vector2( 56, -8 )
+position = Vector2( 40, -7.55806 )
 
-[node name="tiles" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -65535, 0, 0, -65534, 1, 0, -65532, 1, 0, -65530, 1, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0 )
+[node name="Node" type="Node2D" parent="."]
+position = Vector2( 8, 8 )
+
+[node name="GrassBlock" parent="Node" instance=ExtResource( 1 )]
+
+[node name="GrassBlock2" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 16, 0 )
+
+[node name="GrassBlock3" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 32, 0 )
+
+[node name="GrassBlock4" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 48, 0 )
+
+[node name="GrassBlock5" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="GrassBlock6" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 80, 0 )
+
+[node name="GrassBlock7" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="grass_tile" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 0, 16 )
+
+[node name="grass_tile2" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 16, 16 )
+
+[node name="grass_tile3" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 32, 16 )
+
+[node name="grass_tile4" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 48, 16 )
+
+[node name="grass_tile5" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 64, 16 )
+
+[node name="grass_tile6" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 80, 16 )
+
+[node name="grass_tile7" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 96, 16 )
+
+[node name="grass_tile8" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 0, 32 )
+
+[node name="grass_tile9" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 16, 32 )
+
+[node name="grass_tile10" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 32, 32 )
+
+[node name="grass_tile11" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 48, 32 )
+
+[node name="grass_tile12" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 64, 32 )
+
+[node name="grass_tile13" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 80, 32 )
+
+[node name="grass_tile14" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 96, 32 )
+
+[node name="grass_tile15" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 0, 48 )
+
+[node name="grass_tile16" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 16, 48 )
+
+[node name="grass_tile17" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 32, 48 )
+
+[node name="grass_tile18" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 48, 48 )
+
+[node name="grass_tile19" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 64, 48 )
+
+[node name="grass_tile20" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 80, 48 )
+
+[node name="grass_tile21" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 96, 48 )
+
+[node name="Tree" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 8, -16 )
 
 [node name="end_position" type="Position2D" parent="."]
 position = Vector2( 112, 0 )
 
 [node name="Death" parent="." instance=ExtResource( 4 )]
-position = Vector2( 88, -8 )
+position = Vector2( 88.1057, -8 )
+
+[node name="Bush" parent="." instance=ExtResource( 6 )]
+position = Vector2( 64, -8 )

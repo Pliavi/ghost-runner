@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/head_jumping.wav-a3823cff1baf8063e8d3f5f8c86c1d2c.sample"
+
+[deps]
+
+source_file="res://sounds/head_jumping.wav"
+dest_files=[ "res://.import/head_jumping.wav-a3823cff1baf8063e8d3f5f8c86c1d2c.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

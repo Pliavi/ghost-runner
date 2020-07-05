@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/taking_damage.wav-3b50b1fb28e2ad08b58302fcbc19922e.sample"
+
+[deps]
+
+source_file="res://sounds/taking_damage.wav"
+dest_files=[ "res://.import/taking_damage.wav-3b50b1fb28e2ad08b58302fcbc19922e.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

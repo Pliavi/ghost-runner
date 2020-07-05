@@ -1,20 +1,115 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://tilesets/Grass.tres" type="TileSet" id=1]
+[ext_resource path="res://tilesets/Grass/blocks/DirtBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilesets/remove_platform.gd" type="Script" id=2]
 [ext_resource path="res://objects/Thorn/Thorn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tilesets/Grass/blocks/GrassBlock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tilesets/Grass/blocks/Bush.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tilesets/Grass/blocks/Tree.tscn" type="PackedScene" id=6]
 
 [node name="Group2" type="Node2D"]
 script = ExtResource( 2 )
-
-[node name="tiles" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -65536, 1, 0, -65533, 0, 0, -65531, 0, 0, -65530, 1, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0 )
 
 [node name="end_position" type="Position2D" parent="."]
 position = Vector2( 112, 0 )
 
 [node name="Thorn" parent="." instance=ExtResource( 3 )]
-position = Vector2( 32, -8 )
+position = Vector2( 40, -8 )
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2( 8, 8 )
+
+[node name="GrassBlock" parent="Node" instance=ExtResource( 4 )]
+
+[node name="GrassBlock2" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 16, 0 )
+
+[node name="GrassBlock3" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 32, 0 )
+
+[node name="GrassBlock4" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 48, 0 )
+
+[node name="GrassBlock5" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 64, 0 )
+
+[node name="GrassBlock6" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 80, 0 )
+
+[node name="GrassBlock7" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 96, 0 )
+
+[node name="DirtBlock" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 0, 16 )
+
+[node name="DirtBlock2" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 16, 16 )
+
+[node name="DirtBlock3" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 32, 16 )
+
+[node name="DirtBlock4" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 48, 16 )
+
+[node name="DirtBlock5" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 64, 16 )
+
+[node name="DirtBlock6" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 80, 16 )
+
+[node name="DirtBlock7" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 96, 16 )
+
+[node name="DirtBlock8" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+
+[node name="DirtBlock9" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 16, 32 )
+
+[node name="DirtBlock10" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 32, 32 )
+
+[node name="DirtBlock11" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 48, 32 )
+
+[node name="DirtBlock12" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 64, 32 )
+
+[node name="DirtBlock13" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 80, 32 )
+
+[node name="DirtBlock14" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 96, 32 )
+
+[node name="DirtBlock15" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 0, 48 )
+
+[node name="DirtBlock16" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 16, 48 )
+
+[node name="DirtBlock17" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 32, 48 )
+
+[node name="DirtBlock18" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 48, 48 )
+
+[node name="DirtBlock19" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 64, 48 )
+
+[node name="DirtBlock20" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 80, 48 )
+
+[node name="DirtBlock21" parent="Node" instance=ExtResource( 1 )]
+position = Vector2( 96, 48 )
+
+[node name="Bush" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 16, -16 )
+
+[node name="Tree" parent="Node" instance=ExtResource( 6 )]
+position = Vector2( 0, -16 )
+
+[node name="Tree2" parent="Node" instance=ExtResource( 6 )]
+position = Vector2( 56, -16 )
+
+[node name="Bush2" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 96, -16 )

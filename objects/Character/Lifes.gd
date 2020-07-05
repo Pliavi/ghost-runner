@@ -22,13 +22,8 @@ func create_life():
 	return new_life
 	
 func _on_hurt():
-	Globals.lifes -= 1
-	var life:TextureRect = self.get_child(Globals.lifes)
-	life.texture = self.life_state_textures.empty
-	
-	if Globals.lifes == 0:
-		self.get_tree().reload_current_scene()
+	if Globals.lifes >= 0:
+		var life:TextureRect = self.get_child(Globals.lifes)
+		life.texture = self.life_state_textures.empty
 
-func _on_dead():
-	Globals.lifes = 0
-	self.get_tree().reload_current_scene()
+
