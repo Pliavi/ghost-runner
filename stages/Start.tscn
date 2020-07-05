@@ -144,7 +144,7 @@ outline_size = 1
 outline_color = Color( 0.384314, 0.333333, 0.396078, 1 )
 font_data = ExtResource( 5 )
 
-[node name="Control" type="Control"]
+[node name="Start" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 6 )
@@ -239,17 +239,18 @@ position = Vector2( 48, 3.5 )
 [node name="character" type="AnimatedSprite" parent="characters"]
 position = Vector2( 24, 104 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="death" type="AnimatedSprite" parent="characters"]
 position = Vector2( 120, 104 )
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="heart" type="AnimatedSprite" parent="characters"]
 position = Vector2( 72, 104 )
 frames = SubResource( 9 )
+frame = 1
 playing = true
 
 [node name="hi_score_label" type="Label" parent="."]

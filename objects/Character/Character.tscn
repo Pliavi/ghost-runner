@@ -149,7 +149,7 @@ head_jumping_sound = ExtResource( 7 )
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]

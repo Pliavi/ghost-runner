@@ -126,7 +126,6 @@ __meta__ = {
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 volume_db = -8.0
-autoplay = true
 [connection signal="dead" from="Character" to="." method="_on_dead"]
 [connection signal="hurt" from="Character" to="CanvasControls/LifeHUD" method="_on_hurt"]
 [connection signal="pre_dead" from="Character" to="StageMover" method="_on_Character_pre_dead"]

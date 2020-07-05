@@ -16,8 +16,9 @@ export(AudioStreamSample) var attacking_sound
 export(AudioStreamSample) var taking_damage_sound
 export(AudioStreamSample) var dying_sound
 export(AudioStreamSample) var head_jumping_sound
-
+	
 func play_sound(stream_name):
+	$audio_player.stream_paused = !Globals.is_fx_on
 	$audio_player.stream = self[stream_name + "_sound"]
 	$audio_player.play()
 
