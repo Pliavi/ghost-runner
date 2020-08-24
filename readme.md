@@ -5,8 +5,5 @@
 
 ### [Play it now on Itch.io!! (Click here)](https://pliavi.itch.io/live-runner)
 
-<center align="center">  
-  <img width="230" src="./_docs/print01.png" align="center"/>
-  <img width="230" src="./_docs/print02.jpeg" align="center"/>
-  <img width="230" src="./_docs/print03.jpeg" align="center"/>
-</center>
+| ![](./_docs/print01.jpeg) | ![](./_docs/print02.jpeg) | ![](./_docs/print03.jpeg) |
+|---|:---:|---|
